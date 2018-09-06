@@ -1,0 +1,331 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<link rel="stylesheet" href="/animations/animations.css" type="text/css">
+<link rel="stylesheet" href="/global.css" type="text/css">
+<link href="/libraries/prism/prism.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
+
+<!-- Navigation -->
+<nav class="cc-nav">
+    <div class="cc-nav-inner">
+        <a class="cc-nav-icon" href="/index.html">
+            <img src="/assets/icon_white.png">
+        </a>
+        <div class="cc-container">
+            <h1 class="cc-nav-title">Animations</h1>
+        </div>
+        <div>
+            <a class="cc-account-toggle" data-toggle="dropdown" data-target="#accountDropdown">
+                <i class="far fa-user-circle"></i>
+            </a>
+            <div class="cc-nav-menu-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="cc-dropdown" id="accountDropdown">
+                <ul>
+                    <li><a href="/login.html">Sign In</a></li>
+                    <li><a href="/register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</nav>
+<div class="cc-nav-menu">
+    <ul>
+        <li id="home" class="home-link"><a href="/index.html"><img src="/assets/nav_icon.png"></a></li>
+        <li id="animations"><a href="/animations/animations.html">Animations</a></li>
+        <li id="components"><a href="/components/components.html">Components</a></li>
+        <li id="styles"><a href="/styles/styles.html">Styles</a></li>
+        <li id="github"><a href="https://github.com/32gits" target="_blank">GitHub</a></li>
+    </ul>
+</div>
+
+
+<!-- Body -->
+<div class="cc-container">
+
+    <!-- loading -->
+    <div class="cc-card">
+        <span class="cc-card-info" data-toggle="collapse" data-target=".collapse1">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Loading Bar</h1>
+        </div>
+        <p class="info-text mb-2">
+            A loading bar in two different sizes. Use the <code class="lang-css">.loading</code> class 
+            Add the <code class="lang-css">.tall</code> class for the larger size. For the candy cane 
+            styling, use <code class="lang-css">.img-ld</code> class instead of the
+            <code class="lang-css">.ld</code> class on the inner element.
+        </p>
+        <div class="flex">
+            <button type="button" class="cc-btn cc-default mr-2" onclick="load(event)">LOAD</button>
+            <div class="loading">
+                <div class="ld"></div>
+            </div>
+        </div>
+        <div class="flex mt-1">
+            <button type="button" class="cc-btn cc-default mr-2" onclick="load(event)" id="load-button-2">LOAD</button>
+            <div class="loading tall">
+                <div class="img-ld"></div>
+            </div>
+        </div>
+
+        <div class="cc-collapse collapse1">
+            <p class="mb-05 mt-2">HTML</p>
+            <pre class="mb-1"><code class="lang-html">&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-default mr-2&quot; onclick=&quot;load(event)&quot;&gt;LOAD&lt;/button&gt;
+&lt;div class=&quot;loading&quot;&gt;
+    &lt;div class=&quot;ld&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+<br>
+&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-default mr-2&quot; onclick=&quot;load(event)&quot;&gt;LOAD&lt;/button&gt;
+&lt;div class=&quot;loading tall&quot;&gt;
+    &lt;div class=&quot;img-ld&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <p class="mb-05">JavaScript</p>
+<pre class="mb-1"><code class="lang-javascript">function load(event) {
+    var button = event.target;
+    button.classList.toggle('active');
+    button.nextElementSibling.firstElementChild.classList.toggle('loading-inner');
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- input field -->
+    <div class="cc-card">
+        <span class="cc-card-info" data-toggle="collapse" data-target="#collapse2">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Text Field</h1>
+        </div>
+        <p class="info-text mb-2">
+            A simple, minimalistic text field with a smooth focus animation and themed highlights.
+            Use an <code class="lang-html">&lt;input&gt;</code> tag with the <code class="lang-css">.cc-text</code>
+            class and wrap it in a div using the <code class="lang-css">.cc-form-group</code> class. Be sure
+            to use a <code class="lang-html">&lt;label&gt;</code> tag with the <code class="lang-css">.cc-text-border</code>
+            class to get the colored and animated line. 
+        </p>
+        <div class="cc-form-group">
+            <input name="name-input" type="text" class="cc-text" placeholder="Enter your name" spellcheck="false">
+            <label class="cc-text-border" for="name-input"></label>
+        </div>
+
+        <div class="cc-collapse" id="collapse2">
+            <p class="mb-05 mt-2">HTML</p>
+<pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-form-group&quot;&gt;
+    &lt;input name=&quot;name-input&quot;
+           type=&quot;text&quot;
+           class=&quot;cc-text&quot;
+           placeholder=&quot;Enter your name&quot;
+           spellcheck=&quot;false&quot;&gt;
+    &lt;label class=&quot;cc-text-border&quot; for=&quot;name-input&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Parallax -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Parallax</h1>
+        </div>
+        <span class="cc-card-info" data-toggle="collapse" data-target="#parallaxCollapse">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+        <p class="info-text mb-1">
+            A parallax scroll effect that supports up to eight image layers.
+        </p>
+        <div id="parallax" class="parallax-container">
+            <img src="/assets/parallax/parallax_8.png">
+            <img src="/assets/parallax/parallax_7.png">
+            <img src="/assets/parallax/parallax_6.png">
+            <img src="/assets/parallax/parallax_5.png">
+            <img src="/assets/parallax/parallax_4.png">
+            <img src="/assets/parallax/parallax_3.png">
+            <img src="/assets/parallax/parallax_2.png">
+            <img src="/assets/parallax/parallax_1.png">
+            
+            <i id="prlx-left" class="fas fa-angle-left prlx-ctrl left" onclick="toggleParallax()"></i>
+            <i id="prlx-right" class="fas fa-angle-right prlx-ctrl right" onclick="toggleParallax()"></i>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Toast</h1>
+        </div>
+
+        <span class="cc-card-info" data-toggle="collapse" data-target="#toastCollapse">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+
+        <p class="mb-2">
+            A simple way to pop a temporary alert to the user. If firing from a button, set the
+            <code class="lang-html">data-target</code> attribute to the ID of the div with the
+            <code class="lang-css">.cc-toast</code> class.
+        </p>
+
+        <button type="button" class="cc-btn cc-default" data-toggle="toast" data-target="#toastTop">TOP</button>
+        <button type="button" class="cc-btn cc-default" data-toggle="toast" data-target="#toastRight">RIGHT</button>
+        <button type="button" class="cc-btn cc-default" data-toggle="toast" data-target="#toastBottom">BOTTOM</button>
+        <button type="button" class="cc-btn cc-default" data-toggle="toast" data-target="#toastLeft">LEFT</button>
+
+        <div class="cc-collapse" id="toastCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            <pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-toast toast-top blue&quot; id=&quot;toastTop&quot;&gt;
+    I'm a toast on the top!
+&lt;/div&gt;
+&lt;div class=&quot;cc-toast toast-right blue&quot; id=&quot;toastRight&quot;&gt;
+    I'm a toast on the right!
+&lt;/div&gt;
+&lt;div class=&quot;cc-toast toast-bottom blue&quot; id=&quot;toastBottom&quot;&gt;
+    I'm a toast on the bottom!
+&lt;/div&gt;
+&lt;div class=&quot;cc-toast toast-left blue&quot; id=&quot;toastLeft&quot;&gt;
+    I'm a toast on the left!
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="cc-collapse" id="toastCollapse">
+            <p class="mb-05">JavaScript</p>
+            <pre class="mb-1"><code class="lang-javascript">const toasts = Array.from(document.querySelectorAll('[data-toggle="toast"]'));
+window.addEventListener('click', (ev) => {
+    const elm = ev.target;
+    if (toasts.includes(elm)) {
+        const selector = elm.getAttribute('data-target');
+        toast(selector);
+    }
+}, false);
+<br>
+function toast(selector) {
+    const targets = Array.from(document.querySelectorAll(selector));
+    targets.forEach(target => {
+        target.classList.toggle('show');
+        setTimeout(() => {
+            target.classList.toggle('show');
+        }, 3000);
+    });
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Carousel</h1>
+        </div>
+        <p>Coming Soon</p>
+    </div>
+
+    <!-- Collapsible -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Collapsible</h1>
+        </div>
+        <span class="cc-card-info" data-toggle="collapse" data-target="#collapseCollapse">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+        <p class="info-text mb-1">
+            An expandable and collapsible container that can also be used as list item if the 
+            collection is wrapped in a div using the <code class="lang-html">.cc-collapse-stack</code>
+            class.
+        </p>
+        <div class="cc-collapse-stack">
+            <button class="collapse-hdr" data-toggle="collapse" data-target="#collapseItem1>
+                <i class="fas fa-plus mr-05"></i>
+                Click to Expand
+            </button>
+            <div class="cc-collapse collapseExample">
+                <div class="collapse-body dark">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+
+            <button class="collapse-hdr" data-toggle="collapse" data-target=".collapseExample2">
+                <i class="fas fa-plus mr-05"></i>
+                Click to Expand
+            </button>
+            <div class="cc-collapse collapseExample2">
+                <div class="collapse-body dark">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Shake -->
+     <div class="cc-card" id="shaker1">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Shake</h1>
+        </div>
+        <button type="button" class="cc-btn cc-default" data-toggle="shake" data-target="#shaker1">DO IT</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Modal</h1>
+        </div>
+        <button type="button" class="cc-btn cc-default" data-toggle="modal" data-target="#modal1">SHOW</button>
+    </div>
+</div>
+
+
+<div class="cc-modal" id="modal1">
+    <div class="cc-modal-card">
+        <h1 class="hdr">Modal</h1>
+        <div class="cc-modal-body">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <button type="button" class="cc-btn cc-default" data-toggle="modal" data-target="#modal1">ACCEPT</button>
+    </div>
+</div>
+
+
+<div class="cc-toast toast-top blue" id="toastTop">
+    I'm a toast on the top!
+</div>
+<div class="cc-toast toast-right blue" id="toastRight">
+    I'm a toast on the right!
+</div>
+<div class="cc-toast toast-bottom blue" id="toastBottom">
+    I'm a toast on the bottom!
+</div>
+<div class="cc-toast toast-left blue" id="toastLeft">
+    I'm a toast on the left!
+</div>
+
+
+<script src="/animations/animations.js"></script>
+<script src="/libraries/prism/prism.js"></script>

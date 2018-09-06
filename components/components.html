@@ -1,0 +1,322 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<link rel="stylesheet" href="/components/components.css" type="text/css">
+<link rel="stylesheet" href="/global.css" type="text/css">
+<link href="/libraries/prism/prism.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
+<!-- Navigation -->
+<nav class="cc-nav">
+    <div class="cc-nav-inner">
+        <a class="cc-nav-icon" href="/index.html">
+            <img src="/assets/icon_white.png">
+        </a>
+        <div class="cc-container">
+            <h1 class="cc-nav-title">Components</h1>
+        </div>
+        <div>
+            <a class="cc-account-toggle" data-toggle="dropdown" data-target=".cc-dropdown">
+                <i class="far fa-user-circle"></i>
+            </a>
+            <div class="cc-nav-menu-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="cc-dropdown" id="accountDropdown">
+                <ul>
+                    <li><a href="/login.html">Sign In</a></li>
+                    <li><a href="/register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</nav>
+<div class="cc-nav-menu">
+    <ul>
+        <li id="home" class="home-link"><a href="/index.html"><img src="/assets/nav_icon.png"></a></li>
+        <li id="animations"><a href="/animations/animations.html">Animations</a></li>
+        <li id="components"><a href="/components/components.html">Components</a></li>
+        <li id="styles"><a href="/styles/styles.html">Styles</a></li>
+        <li id="github"><a href="https://github.com/32gits" target="_blank">GitHub</a></li>
+    </ul>
+</div>
+
+<div class="cc-toc">
+    <div class=""></div>
+</div>
+
+
+
+<div class="cc-container">
+    
+    <!-- Buttons -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Buttons</h1>
+        </div>
+        <span class="cc-card-info" data-toggle="collapse" data-target="#btnCollapse">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+
+        <p class="info-text mb-1">
+            Buttons by default have a flat look with gently rounded corners. You can opt 
+            for the floating version by adding the <code class="lang-css nowrap">.raised</code>
+            class to them. It adds a drop shadow, removes the border color and gives them
+            sharp edges.
+        </p>
+
+        <h2>Flat</h2>
+
+        <div class="mb-1">
+            <button type="button" class="cc-btn cc-default mr-05">DEFAULT</button>
+            <button type="button" class="cc-btn cc-blue mr-05">BLUE</button>
+            <button type="button" class="cc-btn cc-green mr-05">GREEN</button>
+            <button type="button" class="cc-btn cc-orange mr-05">ORANGE</button>
+            <button type="button" class="cc-btn cc-purps">PURPLE</button>
+        </div>
+        
+        <h2>Raised</h2>
+        
+        <div>
+            <button type="button" class="cc-btn raised cc-default mr-05">DEFAULT</button>
+            <button type="button" class="cc-btn raised cc-blue mr-05">BLUE</button>
+            <button type="button" class="cc-btn raised cc-green mr-05">GREEN</button>
+            <button type="button" class="cc-btn raised cc-orange mr-05">ORANGE</button>
+            <button type="button" class="cc-btn raised cc-purps">PURPLE</button>
+        </div>
+        
+        <div class="cc-collapse" id="btnCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            
+            <pre class="mb-1"><code class="lang-html">&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-default&quot;&gt;DEFAULT&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-blue&quot;&gt;BLUE&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-green&quot;&gt;GREEN&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-orange&quot;&gt;ORANGE&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn cc-purps&quot;&gt;PURPLE&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; class=&quot;cc-btn raised cc-default&quot;&gt;DEFAULT&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn raised cc-blue&quot;&gt;BLUE&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn raised cc-green&quot;&gt;GREEN&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn raised cc-orange&quot;&gt;ORANGE&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;cc-btn raised cc-purps&quot;&gt;PURPLE&lt;/button&gt;</code></pre>
+           
+        </div>
+    </div>
+
+
+    <!-- Badges -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Badges</h1>
+        </div>
+        <span class="cc-card-info" data-toggle="collapse" data-target="#badgeCollapse">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+        <p class="info-text mb-1">
+            Badges can notify a user that there are new or unread messages or notifications.
+            Below are the standard colors but of course you can customize them to whatever you like.
+        </p>
+        <span class="badge">default</span>
+        <span class="badge blue">blue</span>
+        <span class="badge green">green</span>
+        <span class="badge orange">orange</span>
+        <span class="badge purps">purple</span>
+        <span class="badge white">white</span>
+            
+        <div class="cc-collapse" id="badgeCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            <pre class="mb-1"><code class="lang-html">&lt;span class=&quot;badge&quot;&gt;default&lt;/span&gt;
+&lt;span class=&quot;badge blue&quot;&gt;blue&lt;/span&gt;
+&lt;span class=&quot;badge green&quot;&gt;green&lt;/span&gt;
+&lt;span class=&quot;badge orange&quot;&gt;orange&lt;/span&gt;
+&lt;span class=&quot;badge purps&quot;&gt;purple&lt;/span&gt;
+&lt;span class=&quot;badge white&quot;&gt;white&lt;/span&gt;</code></pre>
+        </div>
+    </div>
+
+
+    <!-- Alerts -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Alerts</h1>
+        </div>
+        <span class="cc-card-info" data-toggle="collapse" data-target="#alertCollapse">
+            <i class="fas fa-code"></i>
+            see code
+        </span>
+
+        <p class="info-text mb-1">
+            Alerts provide contextual feedback messages for typical user actions. Use the classes
+            <code class="lang-css">.good</code> <code class="lang-css">.bad</code> 
+            <code class="lang-css">.info</code> or <code class="lang-css">.warn</code> for the 
+            corresponding severity of alert.
+        </p>
+
+        <div class="cc-alert good">This is a good alert</div>
+        <div class="cc-alert bad">This is a bad alert</div>
+        <div class="cc-alert info">This is an informative alert</div>
+        <div class="cc-alert warn">This is a warning</div>
+
+        <div class="cc-collapse" id="alertCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            <pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-alert good&quot;&gt;This is a good alert&lt;/div&gt;
+&lt;div class=&quot;cc-alert bad&quot;&gt;This is a bad alert&lt;/div&gt;
+&lt;div class=&quot;cc-alert info&quot;&gt;This is an informative alert&lt;/div&gt;
+&lt;div class=&quot;cc-alert warn&quot;&gt;This is a warning&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+
+    <!-- Lists -->
+    <div class="cc-card">
+        <div class="cc-card-hdr">
+            <h1 class="hdr">Lists</h1>
+        </div>
+
+        <div class="flex between mt-2 f-hdr">
+            <h2 class="m-0">Normal List</h2>
+            <span class="cc-card-info pos-rel cc-inf" data-toggle="collapse" data-target="#nrmlListCollapse">
+                <i class="fas fa-code"></i>
+                see code
+            </span>
+        </div>
+
+        <p class="info-text mb-1">
+            Just your standard way of display items as a collection. Try throwing in a badge to notify 
+            the user of a change, as demonstrated below.
+        </p>
+
+        <div class="cc-list pos-rel">
+            <ul>
+                <li>Larry <span class="badge purps">2 new</span></li>
+                <li>Curly</li>
+                <li>Moe <span class="badge green">5 new</span></li>
+                <li>Shemp</li>
+            </ul>
+        </div>
+
+        <div class="cc-collapse" id="nrmlListCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            <pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-list&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Larry &lt;span class=&quot;badge purps&quot;&gt;2 new&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;Curly&lt;/li&gt;
+        &lt;li&gt;Moe &lt;span class=&quot;badge green&quot;&gt;5 new&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;Shemp&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="flex between mt-2 f-hdr">
+            <h2 class="m-0">Button List</h2>
+            <span class="cc-card-info pos-rel cc-inf" data-toggle="collapse" data-target="#btnListCollapse">
+                <i class="fas fa-code"></i>
+                see code
+            </span>
+        </div>
+
+        <p class="info-text mb-1">
+            Button list items allow you to define interactions for your lists, with styles to
+            indicate they can be clicked on. Adding the <code class="lang-css nowrap">list-btn-tgl</code>
+            attribute to the outer <code class="lang-css nowrap">.cc-list</code> element enables
+            the list items to have a "toggled" state, as demonstrated below.
+        </p>
+
+        <!-- use list-btn-tgl attribute to use the 'active' style -->
+        <div class="cc-list" list-btn-tgl>
+            <button type="button">Larry</button>
+            <button type="button">Curly</button>
+            <button type="button">Moe</button>
+            <button type="button">Shemp <span class="badge orange">6 new</span></button>
+        </div>
+
+        <div class="cc-collapse" id="btnListCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            <pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-list&quot; list-btn-tgl&gt;
+    &lt;button type=&quot;button&quot;&gt;Larry&lt;/button&gt;
+    &lt;button type=&quot;button&quot;&gt;Curly&lt;/button&gt;
+    &lt;button type=&quot;button&quot;&gt;Moe&lt;/button&gt;
+    &lt;button type=&quot;button&quot;&gt;Shemp &lt;span class=&quot;badge orange&quot;&gt;6 new&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+
+        <div class="flex between mt-2 f-hdr">
+            <h2 class="m-0">Detail List</h2>
+            <span class="cc-card-info pos-rel cc-inf" data-toggle="collapse" data-target="#detailListCollapse">
+                <i class="fas fa-code"></i>
+                see code
+            </span>
+        </div>
+
+        <p class="info-text mb-1">
+            The detail list items are for when you need to convey a little more information with a second line of subtext.
+            An anchor tag with the <code class="lang-css nowrap">.cc-list-action</code> class can be added for a
+            secondary action.
+        </p>
+        
+        <div class="cc-list detail">
+            <ul>
+                <li>
+                    Larry
+                    <p>The Larriest Stooge</p>
+                    <a href="#" class="cc-list-action"><i class="fas fa-star"></i></a>
+                </li>
+                <li>
+                    Curly
+                    <p>The Curliest Stooge</p>
+                    <a href="#" class="cc-list-action"><i class="fas fa-star"></i></a>
+                </li>
+                <li>
+                    Moe
+                    <p>The Moeiest Stooge</p>
+                    <a href="#" class="cc-list-action"><i class="fas fa-star"></i></a>
+                </li>
+                <li>
+                    Shemp
+                    <p>The Shempiest Stooge</p>
+                    <a href="#" class="cc-list-action"><i class="fas fa-star"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cc-collapse" id="detailListCollapse">
+            <p class="mb-05 mt-2">HTML</p>
+            
+            <pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-list detail&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            Larry
+            &lt;p&gt;The Larriest Stooge&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;cc-list-action&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Curly
+            &lt;p&gt;The Curliest Stooge&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;cc-list-action&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Moe
+            &lt;p&gt;The Moeiest Stooge&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;cc-list-action&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Shemp
+            &lt;p&gt;The Shempiest Stooge&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;cc-list-action&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/animations/animations.js"></script>
+<script src="/components/components.js"></script>
+<script src="/libraries/prism/prism.js"></script>
