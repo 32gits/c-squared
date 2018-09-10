@@ -38,8 +38,7 @@
         <li id="home" class="home-link"><a href="/index.html"><img src="/assets/nav_icon.png"></a></li>
         <li id="animations"><a href="/animations/animations.html">Animations</a></li>
         <li id="components"><a href="/components/components.html">Components</a></li>
-        <li id="styles"><a href="/styles/styles.html">Styles</a></li>
-        <li id="github"><a href="https://github.com/32gits" target="_blank">GitHub</a></li>
+        <li id="github"><a href="https://github.com/32gits/c-squared" target="_blank">GitHub</a></li>
     </ul>
 </div>
 
@@ -86,12 +85,7 @@
 &lt;div class=&quot;loading tall&quot;&gt;
     &lt;div class=&quot;img-ld&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            <p class="mb-05">JavaScript</p>
-<pre class="mb-1"><code class="lang-javascript">function load(event) {
-    var button = event.target;
-    button.classList.toggle('active');
-    button.nextElementSibling.firstElementChild.classList.toggle('loading-inner');
-}</code></pre>
+            
         </div>
     </div>
 
@@ -194,27 +188,6 @@
 &lt;/div&gt;</code></pre>
         </div>
 
-        <div class="cc-collapse" id="toastCollapse">
-            <p class="mb-05">JavaScript</p>
-            <pre class="mb-1"><code class="lang-javascript">const toasts = Array.from(document.querySelectorAll('[data-toggle="toast"]'));
-window.addEventListener('click', (ev) => {
-    const elm = ev.target;
-    if (toasts.includes(elm)) {
-        const selector = elm.getAttribute('data-target');
-        toast(selector);
-    }
-}, false);
-<br>
-function toast(selector) {
-    const targets = Array.from(document.querySelectorAll(selector));
-    targets.forEach(target => {
-        target.classList.toggle('show');
-        setTimeout(() => {
-            target.classList.toggle('show');
-        }, 3000);
-    });
-}</code></pre>
-        </div>
     </div>
 
     <!-- Carousel -->
@@ -240,11 +213,11 @@ function toast(selector) {
             class.
         </p>
         <div class="cc-collapse-stack">
-            <button class="collapse-hdr" data-toggle="collapse" data-target="#collapseItem1>
+            <button class="collapse-hdr" data-toggle="collapse" data-target="#collapseItem1">
                 <i class="fas fa-plus mr-05"></i>
                 Click to Expand
             </button>
-            <div class="cc-collapse collapseExample">
+            <div id="collapseItem1" class="cc-collapse">
                 <div class="collapse-body dark">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -258,11 +231,11 @@ function toast(selector) {
                 </div>
             </div>
 
-            <button class="collapse-hdr" data-toggle="collapse" data-target=".collapseExample2">
+            <button class="collapse-hdr" data-toggle="collapse" data-target="#collapseItem2">
                 <i class="fas fa-plus mr-05"></i>
                 Click to Expand
             </button>
-            <div class="cc-collapse collapseExample2">
+            <div class="cc-collapse" id="collapseItem2">
                 <div class="collapse-body dark">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
