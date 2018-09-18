@@ -263,10 +263,12 @@ nav ~ .cc-container {
     top: 13px;
     color: #39DBC6;
     font-family: Roboto, "Roboto", sans-serif;
+    text-decoration: none;
 }
 .cc-card-info:hover {
     cursor: pointer;
     color: #1AC0AA;
+    text-decoration: none;
 }
 .cc-card-info i {
     font-size: .75em;
@@ -618,6 +620,7 @@ pre {
     -webkit-font-smoothing: antialiased;
     font-family: Roboto, "Roboto", sans-serif;
     border: 1px solid #CDCDCD;
+    background-color: #FFF;
 }
 .collapse-hdr:hover {
     cursor: pointer;

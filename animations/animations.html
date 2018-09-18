@@ -1,10 +1,19 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-<link rel="stylesheet" href="/animations/animations.css" type="text/css">
-<link rel="stylesheet" href="/global.css" type="text/css">
-<link href="/libraries/prism/prism.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<!doctype html>
 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Squared</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/animations/animations.css" type="text/css">
+    <link rel="stylesheet" href="/global.css" type="text/css">
+    <link href="/libraries/prism/prism.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+
+<body>
 
 
 <!-- Navigation -->
@@ -48,10 +57,10 @@
 
     <!-- loading -->
     <div class="cc-card">
-        <span class="cc-card-info" data-toggle="collapse" data-target=".collapse1">
+        <a href="#!" class="cc-card-info" data-toggle="collapse" data-target=".collapse1">
             <i class="fas fa-code"></i>
             see code
-        </span>
+        </a>
         <div class="cc-card-hdr">
             <h1 class="hdr">Loading Bar</h1>
         </div>
@@ -91,10 +100,10 @@
 
     <!-- input field -->
     <div class="cc-card">
-        <span class="cc-card-info" data-toggle="collapse" data-target="#collapse2">
+        <a href="#!" class="cc-card-info" data-toggle="collapse" data-target="#collapse2">
             <i class="fas fa-code"></i>
             see code
-        </span>
+        </a>
         <div class="cc-card-hdr">
             <h1 class="hdr">Text Field</h1>
         </div>
@@ -128,10 +137,10 @@
         <div class="cc-card-hdr">
             <h1 class="hdr">Parallax</h1>
         </div>
-        <span class="cc-card-info" data-toggle="collapse" data-target="#parallaxCollapse">
+        <a href="#!" class="cc-card-info" data-toggle="collapse" data-target="#parallaxCollapse">
             <i class="fas fa-code"></i>
             see code
-        </span>
+        </a>
         <p class="info-text mb-1">
             A parallax scroll effect that supports up to eight image layers.
         </p>
@@ -156,10 +165,10 @@
             <h1 class="hdr">Toast</h1>
         </div>
 
-        <span class="cc-card-info" data-toggle="collapse" data-target="#toastCollapse">
+        <a href="#!" class="cc-card-info" data-toggle="collapse" data-target="#toastCollapse">
             <i class="fas fa-code"></i>
             see code
-        </span>
+        </a>
 
         <p class="mb-2">
             A simple way to pop a temporary alert to the user. If firing from a button, set the
@@ -203,10 +212,10 @@
         <div class="cc-card-hdr">
             <h1 class="hdr">Collapsible</h1>
         </div>
-        <span class="cc-card-info" data-toggle="collapse" data-target="#collapseCollapse">
+        <a href="#!" class="cc-card-info" data-toggle="collapse" data-target="#collapseCollapse">
             <i class="fas fa-code"></i>
             see code
-        </span>
+        </a>
         <p class="info-text mb-1">
             An expandable and collapsible container that can also be used as list item if the 
             collection is wrapped in a div using the <code class="lang-html">.cc-collapse-stack</code>
@@ -247,6 +256,47 @@
                         sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
+            </div>
+
+            <div class="cc-collapse" id="collapseCollapse">
+                <p class="mb-05 mt-2">HTML</p>
+                <pre class="mb-1"><code class="lang-html">&lt;div class=&quot;cc-collapse-stack&quot;&gt;
+&lt;button class=&quot;collapse-hdr&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapseItem1&quot;&gt;
+    &lt;i class=&quot;fas fa-plus mr-05&quot;&gt;&lt;/i&gt;
+    Click to Expand
+&lt;/button&gt;
+&lt;div id=&quot;collapseItem1&quot; class=&quot;cc-collapse&quot;&gt;
+    &lt;div class=&quot;collapse-body dark&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class=&quot;collapse-hdr&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapseItem2&quot;&gt;
+    &lt;i class=&quot;fas fa-plus mr-05&quot;&gt;&lt;/i&gt;
+    Click to Expand
+&lt;/button&gt;
+&lt;div class=&quot;cc-collapse&quot; id=&quot;collapseItem2&quot;&gt;
+    &lt;div class=&quot;collapse-body dark&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
             </div>
         </div>
     </div>
@@ -302,3 +352,5 @@
 
 <script src="/animations/animations.js"></script>
 <script src="/libraries/prism/prism.js"></script>
+</body>
+</html>
