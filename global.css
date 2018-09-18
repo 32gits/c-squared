@@ -812,14 +812,14 @@ and change border color based on that */
     padding: 2rem;
     border-left: 10px solid #39DBC6;
     position: fixed;
-    transform: translateY(25%);
+    transform: translateY(15%);
     left: calc(50% - 300px);
     z-index: 100;
     transition: all .5s ease;
     opacity: .1;
 }
 .cc-modal.show .cc-modal-card {
-    transform: translateY(65%);
+    transform: translateY(45%);
     opacity: 1;
 }
 .cc-modal .hdr {
